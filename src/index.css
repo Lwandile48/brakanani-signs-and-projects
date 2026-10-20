@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+:root {
+  --meteorite: #2C2929;
+  --armor-wash: #030303;
+  --dark-ruby: #7A000E;
+  --cultured-pearl: #F5F4F2;
+  --catacomb-walls: #DCD7D4;
+  --creme-white: #C3B0F0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--meteorite);
+  color: var(--cultured-pearl);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif-brand {
+  font-family: Georgia, 'Playfair Display', serif;
+}
+
+/* Floating label styles */
+.floating-input-group {
+  position: relative;
+}
+
+.floating-input-group input,
+.floating-input-group textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #c0bebe;
+  padding: 10px 0;
+  font-size: 0.95rem;
+  color: #2C2929;
+  transition: border-color 0.25s ease;
+}
+
+.floating-input-group input:focus,
+.floating-input-group textarea:focus {
+  outline: none;
+  border-bottom-color: #7A000E;
+}
+
+.floating-input-group label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 0.95rem;
+  color: #71717a;
+  pointer-events: none;
+  transition: 0.2s ease all;
+}
+
+.floating-input-group input:focus ~ label,
+.floating-input-group input:not(:placeholder-shown) ~ label,
+.floating-input-group textarea:focus ~ label,
+.floating-input-group textarea:not(:placeholder-shown) ~ label {
+  top: -12px;
+  font-size: 0.75rem;
+  color: #7A000E;
+  font-weight: 600;
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2.4s ease-in-out infinite;
+}
