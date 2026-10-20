@@ -32,7 +32,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenQuoteModal }) 
 
             <p className="text-sm text-[#DCD7D4] max-w-sm leading-relaxed">
               <strong className="text-[#F5F4F2]">{BRAND_INFO.slogan}</strong><br />
-              Professional signage and project solutions — from concept and design through to precision fabrication and high-altitude installation.
+              Professional signage and project solutions. From concept and design through to precision fabrication and high-altitude installation.
             </p>
 
             <div className="pt-2 flex items-center gap-2">

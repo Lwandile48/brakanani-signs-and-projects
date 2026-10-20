@@ -14,7 +14,7 @@ const projectImage = (name: string) => {
 export const BRAND_INFO = {
   name: 'BRAKANANI',
   tagline: 'SIGNS & PROJECTS',
-  slogan: 'Making Your Business Visible.',
+  slogan: 'Built To Be Seen',
   phone: '079 184 5221',
   phoneClean: '27791845221',
   email: 'info@brakanani.co.za',
