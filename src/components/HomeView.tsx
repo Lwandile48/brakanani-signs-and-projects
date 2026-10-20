@@ -136,7 +136,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <div className="pt-6 sm:pt-8 border-t border-[#3a3636] grid grid-cols-3 gap-2 sm:gap-4 text-[11px] sm:text-xs text-[#DCD7D4]">
                 <div>
                   <strong className="block text-[#F5F4F2] font-semibold text-xs sm:text-sm truncate">100% Turnkey</strong>
-                  <span className="text-[10px] sm:text-xs">Concept to rigging</span>
+                  <span className="text-[10px] sm:text-xs">Concept to Rigging</span>
                 </div>
                 <div>
                   <strong className="block text-[#F5F4F2] font-semibold text-xs sm:text-sm truncate">SABS Compliant</strong>
