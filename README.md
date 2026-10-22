@@ -18,3 +18,9 @@ View your app in AI Studio: https://ai.studio/apps/228a7241-e507-4889-a183-79e14
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+## Project Images
+
+Place source images in `src/assets/images`, grouped into descriptive subfolders as needed. After adding or renaming images, run `npm run optimize:images` to generate responsive WebP files in `public/images` and update the generated image-width manifest.
+
+Use the source path relative to `src/assets/images` without its file extension with `responsiveImageSources`, for example `boards/Complex Entrance Board`.

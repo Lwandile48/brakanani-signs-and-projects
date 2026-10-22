@@ -14,7 +14,7 @@ export const FloatingActions: React.FC = () => {
         title="Chat with us on WhatsApp"
       >
         <MessageCircle className="w-4 h-4 fill-white" />
-        <span className="hidden sm:inline">WhatsApp Us</span>
+        <span className="hidden sm:inline">072 417 2753</span>
       </a>
 
       {/* Floating Phone Button (matches document specification) */}

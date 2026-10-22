@@ -29,19 +29,19 @@ export type SlideItem = {
 type CSSLength = string | number;
 
 const VAULT_IMAGES = [
-  responsiveImageSources("edwaleni_community_sign_1792318415988"),
-  responsiveImageSources("corporate_hours_plaque_1792318419707"),
-  responsiveImageSources("signage_installers_high_altitude_1792318418195"),
-  responsiveImageSources("modern_shopfront_signage_1792318419764"),
-  responsiveImageSources("hero_signage_showcase_1792318416486", 1376),
+  responsiveImageSources("boards/Complex Entrance Board"),
+  responsiveImageSources("Corporate Plaques/Corporate Plaque"),
+  responsiveImageSources("boards/Hazeyveiw Board"),
+  responsiveImageSources("Shopfront Signage/Factory Board"),
+  responsiveImageSources("Branding/Khayalami Hotel Group 2"),
 ];
 
 const DEFAULT_ITEMS: SlideItem[] = [
-  { image: VAULT_IMAGES[0].src, imageSrcSet: VAULT_IMAGES[0].srcSet, text: "eDwaleni Community Sign", category: "Monument & Outdoor", subtext: "Natural stone foundation with fabricated 3D lettering" },
-  { image: VAULT_IMAGES[1].src, imageSrcSet: VAULT_IMAGES[1].srcSet, text: "Corporate Operating Hours Plaque", category: "Corporate Plaques", subtext: "Precision laser-engraved brushed stainless steel" },
-  { image: VAULT_IMAGES[2].src, imageSrcSet: VAULT_IMAGES[2].srcSet, text: "High-Altitude Installation", category: "Rigging & Installation", subtext: "OHS certified elevated rigging on high-rise facade" },
-  { image: VAULT_IMAGES[3].src, imageSrcSet: VAULT_IMAGES[3].srcSet, text: "Shopfront Signage & Facade", category: "Shopfront & Retail", subtext: "Warm-glow 3D fabricated channel letters" },
-  { image: VAULT_IMAGES[4].src, imageSrcSet: VAULT_IMAGES[4].srcSet, text: "Directional & Information Signs", category: "Wayfinding & Directional", subtext: "Architectural property entrance and directional system" },
+  { image: VAULT_IMAGES[0].src, imageSrcSet: VAULT_IMAGES[0].srcSet, text: "Complex Entrance Board", category: "Boards & Outdoor", subtext: "Outdoor entrance signage" },
+  { image: VAULT_IMAGES[1].src, imageSrcSet: VAULT_IMAGES[1].srcSet, text: "Corporate Plaque", category: "Corporate Plaques", subtext: "Indoor plaque and information signage" },
+  { image: VAULT_IMAGES[2].src, imageSrcSet: VAULT_IMAGES[2].srcSet, text: "Hazeyview Board", category: "Boards & Outdoor", subtext: "Outdoor signboard installation" },
+  { image: VAULT_IMAGES[3].src, imageSrcSet: VAULT_IMAGES[3].srcSet, text: "Factory Board", category: "Shopfront Signage", subtext: "Exterior shopfront signage" },
+  { image: VAULT_IMAGES[4].src, imageSrcSet: VAULT_IMAGES[4].srcSet, text: "Khayalami Hotel Group", category: "Branding & Promotional", subtext: "Business branding" },
 ];
 
 const DEFAULT_EASE = "cubic-bezier(1, -0.001, 0.159, 0.838)";

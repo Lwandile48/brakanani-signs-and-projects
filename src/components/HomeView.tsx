@@ -12,6 +12,12 @@ const DimensionalSwitchSlider = lazy(() =>
   }))
 );
 
+const DIMENSIONAL_SHOWCASE_FEATURED_IDS: Partial<Record<PortfolioItem['category'], string>> = {
+  monument: 'boards-hazeyveiw-board',
+  safety: 'safety-and-warning-signage-smoking-area-1',
+  shopfront: 'shopfront-signage-factory-board',
+};
+
 interface HomeViewProps {
   onNavigate: (view: PageView) => void;
   onOpenQuoteModal: (service?: string) => void;
@@ -52,7 +58,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
     ? PORTFOLIO_ITEMS
     : PORTFOLIO_ITEMS.filter((item) => item.category === activeCategory);
 
-  const sliderItems: SlideItem[] = PORTFOLIO_ITEMS.map((item) => ({
+  const dimensionalPortfolioItems = PORTFOLIO_ITEMS.filter((item, index, items) => {
+    const featuredId = DIMENSIONAL_SHOWCASE_FEATURED_IDS[item.category];
+    if (featuredId) return item.id === featuredId;
+    return items.findIndex((candidate) => candidate.category === item.category) === index;
+  });
+
+  const sliderItems: SlideItem[] = dimensionalPortfolioItems.map((item) => ({
     id: item.id,
     image: item.image,
     imageSrcSet: item.imageSrcSet,
@@ -153,7 +165,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-xl overflow-hidden border-2 border-[#3a3636] shadow-2xl group bg-[#181616]">
                 <img
-                  {...responsiveImageSources('hero_signage_showcase_1792318416486', 1376)}
+                  {...responsiveImageSources('Shopfront Signage/Factory Board')}
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   alt="Brakanani Signage Showcase"
                   loading="eager"
@@ -168,13 +180,13 @@ export const HomeView: React.FC<HomeViewProps> = ({
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-6">
                   <span className="text-[11px] font-bold uppercase tracking-widest text-[#C3B0F0] mb-1">
-                    Featured Architectural Signage
+                    Shopfront & Building Signage
                   </span>
                   <p className="text-sm font-serif font-bold text-[#F5F4F2]">
-                    Monumental 3D Fabrication &amp; Integrated Illumination
+                    Prominent exterior signage for a local business
                   </p>
                   <p className="text-xs text-[#DCD7D4] mt-1">
-                    Custom built to withstand South African weather extremes with lasting aesthetic brilliance.
+                    Clear, visible signage that helps customers find the business.
                   </p>
                 </div>
               </div>
@@ -420,7 +432,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               {/* Quick thumb navigation strip */}
               <div className="flex flex-wrap items-center justify-center gap-2.5 pt-2">
                 <span className="text-xs text-[#888] mr-1">Direct jump:</span>
-                {PORTFOLIO_ITEMS.map((item) => (
+                {dimensionalPortfolioItems.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => onSelectProject(item)}
@@ -439,11 +451,10 @@ export const HomeView: React.FC<HomeViewProps> = ({
                   { id: 'all', label: 'All Projects' },
                   { id: 'monument', label: 'Monument & Outdoor' },
                   { id: 'plaque', label: 'Corporate Plaques' },
-                  { id: 'installation', label: 'Rigging & Installation' },
                   { id: 'shopfront', label: 'Shopfront Signage' },
                   { id: 'directional', label: 'Directional' },
                   { id: 'safety', label: 'Safety & Warning' },
-                  { id: 'promotional', label: 'Branding & Fleet' },
+                  { id: 'promotional', label: 'Branding & Promotional' },
                 ].map((cat) => (
                   <button
                     key={cat.id}

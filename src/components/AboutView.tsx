@@ -2,6 +2,7 @@ import React from 'react';
 import { PageView } from '../types';
 import { BRAND_INFO } from '../data/content';
 import { responsiveImageSources } from '../utils/responsiveImageSources';
+import edwaleniImage from '../assets/images/Edwaleni/Edwaleni.png';
 import { CheckCircle2, Shield, Target, Award, ArrowRight, Hammer, Layers, Users } from 'lucide-react';
 import { GlassFold } from '@/components/ui/glass-fold';
 
@@ -99,17 +100,17 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
               </div>
             </div>
 
-            {/* Intro Image: Installers erecting the large eDwaleni sign */}
+            {/* Intro image */}
             <div className="relative">
               <div className="relative rounded-xl overflow-hidden border-2 border-[#3a3636] shadow-2xl bg-[#222020]">
                 <img
-                  {...responsiveImageSources('edwaleni_community_sign_1792318415988')}
+                  src={edwaleniImage}
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  alt="eDwaleni Community Monument Sign Installation"
+                  alt="Edwaleni sign installation"
                   loading="lazy"
                   decoding="async"
                   referrerPolicy="no-referrer"
-                  className="w-full h-[380px] sm:h-[450px] object-cover"
+                  className="w-full h-[380px] sm:h-[450px] object-contain"
                   onError={(e) => {
                     const target = e.currentTarget;
                     target.style.display = 'none';
@@ -120,10 +121,10 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
                     Monumental Project Delivery
                   </span>
                   <p className="text-sm font-serif font-bold text-[#F5F4F2]">
-                    eDwaleni Community Welcome Monument
+                    Outdoor Entrance Signage
                   </p>
                   <p className="text-xs text-[#DCD7D4] mt-0.5">
-                    Architectural stone foundation with fabricated dimensional lettering erected on a scenic roadside bank.
+                    An outdoor signboard project presented as part of the company portfolio.
                   </p>
                 </div>
               </div>
@@ -152,7 +153,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
               {/* Background Monument Image with Ruby Gradient Overlay */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <img
-                  {...responsiveImageSources('edwaleni_community_sign_1792318415988')}
+                  {...responsiveImageSources('boards/Complex Entrance Board')}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   alt=""
                   loading="lazy"
@@ -186,7 +187,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
               {/* Background Architectural Image with Dark Gradient Overlay */}
               <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <img
-                  {...responsiveImageSources('hero_signage_showcase_1792318416486', 1376)}
+                  {...responsiveImageSources('Branding/Khayalami Hotel Group 2')}
                   sizes="(max-width: 768px) 100vw, 50vw"
                   alt=""
                   loading="lazy"
@@ -230,9 +231,9 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
               <div className="lg:col-span-6 relative">
                 <div className="rounded-lg overflow-hidden border border-[#3a3636] bg-[#181616]">
                   <img
-                    {...responsiveImageSources('signage_installers_high_altitude_1792318418195')}
+                    {...responsiveImageSources('boards/Hazeyveiw Board')}
                     sizes="(max-width: 1024px) 100vw, 50vw"
-                    alt="High-Altitude Installation Crew at Work"
+                    alt="Outdoor signboard installation"
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
@@ -245,7 +246,7 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
                 </div>
                 <div className="mt-3 text-xs text-[#888] flex items-center gap-2">
                   <Shield className="w-3.5 h-3.5 text-[#7A000E]" />
-                  <span>Certified rigging specialists on elevated staging</span>
+                  <span>Outdoor signboard installation</span>
                 </div>
               </div>
 
@@ -256,19 +257,19 @@ export const AboutView: React.FC<AboutViewProps> = ({ onNavigate, onOpenQuoteMod
                 </span>
 
                 <h2 className="text-3xl font-serif font-bold text-[#F5F4F2]">
-                  eDwaleni Community Sign
+                  Outdoor Signboard Installation
                 </h2>
 
                 <p className="text-base text-[#DCD7D4] leading-relaxed">
-                  From concept to professional high-altitude installation. A high-impact outdoor signage project designed to capture attention and create a lasting welcome for the eDwaleni community.
+                  A real-world example of outdoor signage installation, from placing the sign structure to presenting the finished board.
                 </p>
 
                 <blockquote className="border-l-2 border-[#C3B0F0] pl-4 py-1 italic text-lg text-[#C3B0F0] font-serif font-semibold">
-                  &ldquo;Our space, home and pride.&rdquo;
+                  Outdoor signs designed for visibility.
                 </blockquote>
 
                 <p className="text-xs text-[#DCD7D4] leading-relaxed">
-                  The structure combines rustic natural dry-stack masonry with precision-cut dimensional metal letters, engineered to withstand intense solar exposure and rain.
+                  Explore the gallery to see more examples of boards, shopfronts, plaques, branding and safety signs.
                 </p>
 
                 <div className="pt-2">
